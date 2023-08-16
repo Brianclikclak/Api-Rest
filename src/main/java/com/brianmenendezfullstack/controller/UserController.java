@@ -6,6 +6,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -59,6 +60,16 @@ public class UserController {
         user.get().setEnabled(userDetails.getEnabled());
 
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user.get()));
+    }
+
+    // Delete an User
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable(value = "id") Long userId) {
+        if (!userService.findById(userId).isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        userService.deleteById(userId);
+        return ResponseEntity.ok().build();
     }
 
 }
