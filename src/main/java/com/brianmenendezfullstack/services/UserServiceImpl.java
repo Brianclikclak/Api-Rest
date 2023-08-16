@@ -8,8 +8,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.brianmenendezfullstack.cursospringboot.entity.User;
-import com.brianmenendezfullstack.cursospringboot.repository.UserRepository;
+import com.brianmenendezfullstack.entity.User;
+import com.brianmenendezfullstack.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {

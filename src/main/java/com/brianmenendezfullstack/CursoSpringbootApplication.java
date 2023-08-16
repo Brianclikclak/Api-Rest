@@ -1,4 +1,4 @@
-package com.brianmenendezfullstack.cursospringboot;
+package com.brianmenendezfullstack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
