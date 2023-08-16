@@ -1,6 +1,9 @@
 package com.brianmenendezfullstack.controller;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,4 +75,13 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
+    // Read all Users
+    @GetMapping
+    public List<User> readAll() {
+        List<User> users = StreamSupport
+                .stream(userService.findAll().spliterator(), false)
+                .collect(Collectors.toList());
+        return users;
+
+    }
 }
