@@ -1,4 +1,4 @@
-package com.brianmenendezfullstack.cursospringboot.controller;
+package com.brianmenendezfullstack.controller;
 
 import java.util.Optional;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.brianmenendezfullstack.cursospringboot.entity.User;
+import com.brianmenendezfullstack.entity.User;
 import com.brianmenendezfullstack.services.UserService;
 
 @RestController

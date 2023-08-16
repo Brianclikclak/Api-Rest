@@ -1,4 +1,4 @@
-package com.brianmenendezfullstack.cursospringboot.entity;
+package com.brianmenendezfullstack.entity;
 
 import java.io.Serializable;
 
